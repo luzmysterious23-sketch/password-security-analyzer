@@ -1,40 +1,56 @@
 # Password Security Analyzer
 
-A browser-based cybersecurity portfolio project that analyzes password strength and explains common password risks.
+A browser-based cybersecurity portfolio project that analyzes password strength, explains risky patterns, and estimates cracking risk across multiple attack models.
 
-## How To Run
+## Live Demo
 
-Open this file in Chrome:
-
-```text
-index.html
-```
-
-No Python, Node.js, server, or installer is required.
-
-## What You Should See
-
-When the page opens, you should see a password input box, a strength meter, security checks, risk signals, and recommendations.
-
-Try these examples:
+After GitHub Pages is enabled, the live demo is available at:
 
 ```text
-password123
-Summer2026!
-R8!qv2#Lp9@zM4
+https://luzmysterious23-sketch.github.io/password-security-analyzer/
 ```
 
-The strength meter and checklist should update as you type.
+## What It Does
+
+The analyzer runs entirely in the browser and updates as a sample password is entered. It does not send passwords over the network.
+
+It evaluates:
+
+- Password length
+- Character set variety
+- Estimated entropy
+- Estimated search space
+- Common-password matches
+- Leetspeak-style substitutions
+- Keyboard and sequence patterns
+- Date and year patterns
+- Repeated characters
+- Predictable suffixes
+- Offline and online attack-model estimates
+
+## Demo Scenarios
+
+Use the built-in demo buttons:
+
+```text
+Weak        password123
+Patterned   Summer2026!
+Passphrase  river-cobalt-lantern-94
+Random      generated secure sample
+```
+
+The dashboard shows a score, risk summary, attack estimates, security findings, recommendations, and a sanitized report that excludes the password value.
 
 ## Features
 
-- Live password strength score
-- Estimated entropy in bits
-- Estimated offline crack time
-- Checks for length, character variety, common passwords, repeated characters, dates, and keyboard patterns
+- Live password risk score
+- Entropy and search-space estimates
+- Online and offline crack-time estimates
+- Pattern detection for common human password habits
 - Strong password generator
-- Clear recommendations based on the current password
-- Runs completely in the browser
+- Copyable sanitized report
+- Responsive dashboard layout
+- No backend required
 
 ## Tech Stack
 
@@ -45,12 +61,32 @@ The strength meter and checklist should update as you type.
 ## Cybersecurity Concepts Demonstrated
 
 - Password entropy
-- Brute-force guessing risk
-- Dictionary/common-password checks
-- Pattern detection
-- Client-side security design
-- User-focused security feedback
+- Brute-force attack modeling
+- Dictionary attack risk
+- Hybrid guessing patterns
+- Client-side privacy design
+- Security-focused UX
 
 ## Important Security Note
 
-This is an educational portfolio project. It does not store passwords or send them over the network, but users should not test real passwords in any portfolio demo.
+This is an educational portfolio project. Users should not test real passwords in a public demo.
+
+## Resume Bullets
+
+- Built a browser-based password security analyzer using HTML, CSS, and JavaScript.
+- Implemented live password scoring with entropy estimation, common-password detection, leetspeak normalization, sequence checks, and attack-model crack-time estimates.
+- Designed a responsive cybersecurity dashboard with risk findings, recommendations, and sanitized reporting.
+
+## LinkedIn Post Draft
+
+I built a cybersecurity portfolio project: a browser-based Password Security Analyzer.
+
+The app evaluates sample passwords using entropy estimates, pattern detection, common-password checks, leetspeak normalization, and attack-model crack-time estimates. It also generates a sanitized report without storing or sending the password.
+
+Live demo:
+https://luzmysterious23-sketch.github.io/password-security-analyzer/
+
+GitHub:
+https://github.com/luzmysterious23-sketch/password-security-analyzer
+
+#Cybersecurity #JavaScript #InfoSec #StudentProjects #Portfolio
