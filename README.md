@@ -54,17 +54,3 @@ The strength meter and checklist should update as you type.
 ## Important Security Note
 
 This is an educational portfolio project. It does not store passwords or send them over the network, but users should not test real passwords in any portfolio demo.
-
-## Resume Bullets
-
-- Built a browser-based password security analyzer using HTML, CSS, and JavaScript.
-- Implemented live password scoring based on entropy, character variety, common password checks, and risky pattern detection.
-- Designed a polished cybersecurity dashboard with actionable security feedback and a client-side password generator.
-
-## LinkedIn Post Draft
-
-I built a beginner-friendly cybersecurity portfolio project: a Password Security Analyzer that runs directly in the browser.
-
-The project analyzes password strength, estimates cracking risk, checks for common weak patterns, and provides safer password recommendations. Building it helped me practice JavaScript, frontend design, and cybersecurity concepts like entropy and brute-force resistance.
-
-#Cybersecurity #JavaScript #InfoSec #StudentProjects #Portfolio
