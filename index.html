@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Security Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Cybersecurity Portfolio Project</p>
+        <h1>Password Security Analyzer</h1>
+      </div>
+      <div class="privacy-badge">Local browser demo</div>
+    </header>
+
+    <section class="dashboard">
+      <section class="panel analyzer-panel" aria-labelledby="analyzer-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Analyzer</p>
+            <h2 id="analyzer-title">Password Review</h2>
+          </div>
+          <span class="score-pill" id="scoreLabel">No password</span>
+        </div>
+
+        <label class="input-label" for="passwordInput">Password</label>
+        <div class="password-row">
+          <input id="passwordInput" class="password-input" type="password" autocomplete="off" spellcheck="false" placeholder="Type a sample password">
+          <button class="secondary-button" id="toggleVisibility" type="button">Show</button>
+          <button class="secondary-button" id="clearPassword" type="button">Clear</button>
+        </div>
+
+        <div class="meter-block" aria-live="polite">
+          <div class="meter-track">
+            <div class="meter-fill" id="meterFill"></div>
+          </div>
+          <div class="meter-meta">
+            <span id="scoreText">Score: 0 / 100</span>
+            <span id="entropyText">Entropy: 0 bits</span>
+          </div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-label">Offline Guessing</span>
+            <strong id="crackTimeText">Instant</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Length</span>
+            <strong id="lengthText">0 chars</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Character Sets</span>
+            <strong id="charsetText">0 used</strong>
+          </div>
+        </div>
+
+        <div class="generator-box">
+          <div>
+            <p class="eyebrow">Generator</p>
+            <h3>Strong Sample Password</h3>
+          </div>
+          <div class="generated-row">
+            <input id="generatedPassword" class="generated-input" type="text" readonly value="">
+            <button class="primary-button" id="generatePassword" type="button">Generate</button>
+            <button class="secondary-button" id="copyPassword" type="button">Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel results-panel" aria-labelledby="results-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Findings</p>
+            <h2 id="results-title">Security Signals</h2>
+          </div>
+        </div>
+
+        <div class="signal-list" id="signalList"></div>
+
+        <div class="recommendation-box">
+          <h3>Recommendations</h3>
+          <ul id="recommendationList"></ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
