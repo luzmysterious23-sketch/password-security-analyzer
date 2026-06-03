@@ -93,6 +93,13 @@ h3 {
   line-height: 1.45;
 }
 
+.byline {
+  margin: 10px 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
 .privacy-badge,
 .score-pill {
   white-space: nowrap;
@@ -404,6 +411,32 @@ h3 {
   color: var(--good);
 }
 
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 18px;
+  padding: 18px 20px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.site-footer p {
+  margin-bottom: 0;
+  line-height: 1.45;
+}
+
+.site-footer strong {
+  color: var(--text);
+}
+
+.footer-note {
+  max-width: 260px;
+  font-weight: 800;
+}
+
 @media (max-width: 980px) {
   .dashboard,
   .analysis-grid {
@@ -411,6 +444,10 @@ h3 {
   }
 
   .topbar {
+    flex-direction: column;
+  }
+
+  .site-footer {
     flex-direction: column;
   }
 }
