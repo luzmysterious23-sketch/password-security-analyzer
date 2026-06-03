@@ -12,25 +12,33 @@
       <div>
         <p class="eyebrow">Cybersecurity Portfolio Project</p>
         <h1>Password Security Analyzer</h1>
+        <p class="subtitle">A client-side password risk lab with entropy scoring, attack-model estimates, pattern detection, and a sanitized report.</p>
       </div>
-      <div class="privacy-badge">Local browser demo</div>
+      <div class="privacy-badge">No network requests</div>
     </header>
 
     <section class="dashboard">
-      <section class="panel analyzer-panel" aria-labelledby="analyzer-title">
+      <section class="panel lab-panel" aria-labelledby="lab-title">
         <div class="panel-heading">
           <div>
-            <p class="eyebrow">Analyzer</p>
-            <h2 id="analyzer-title">Password Review</h2>
+            <p class="eyebrow">Live Analysis</p>
+            <h2 id="lab-title">Password Risk Lab</h2>
           </div>
           <span class="score-pill" id="scoreLabel">No password</span>
         </div>
 
-        <label class="input-label" for="passwordInput">Password</label>
+        <label class="input-label" for="passwordInput">Sample password</label>
         <div class="password-row">
           <input id="passwordInput" class="password-input" type="password" autocomplete="off" spellcheck="false" placeholder="Type a sample password">
           <button class="secondary-button" id="toggleVisibility" type="button">Show</button>
           <button class="secondary-button" id="clearPassword" type="button">Clear</button>
+        </div>
+
+        <div class="sample-row" aria-label="Password examples">
+          <button class="chip-button" type="button" data-sample="password123">Weak</button>
+          <button class="chip-button" type="button" data-sample="Summer2026!">Patterned</button>
+          <button class="chip-button" type="button" data-sample="river-cobalt-lantern-94">Passphrase</button>
+          <button class="chip-button" type="button" id="randomSample">Random</button>
         </div>
 
         <div class="meter-block" aria-live="polite">
@@ -43,31 +51,47 @@
           </div>
         </div>
 
+        <div class="risk-summary" id="riskSummary">Type a sample password to generate an analysis.</div>
+
         <div class="metrics-grid">
           <div class="metric">
-            <span class="metric-label">Offline Guessing</span>
-            <strong id="crackTimeText">Instant</strong>
+            <span class="metric-label">Search Space</span>
+            <strong id="searchSpaceText">0 guesses</strong>
           </div>
           <div class="metric">
-            <span class="metric-label">Length</span>
-            <strong id="lengthText">0 chars</strong>
+            <span class="metric-label">Pattern Penalty</span>
+            <strong id="penaltyText">0 pts</strong>
           </div>
           <div class="metric">
             <span class="metric-label">Character Sets</span>
             <strong id="charsetText">0 used</strong>
           </div>
+          <div class="metric">
+            <span class="metric-label">Length</span>
+            <strong id="lengthText">0 chars</strong>
+          </div>
         </div>
 
-        <div class="generator-box">
-          <div>
-            <p class="eyebrow">Generator</p>
-            <h3>Strong Sample Password</h3>
-          </div>
-          <div class="generated-row">
-            <input id="generatedPassword" class="generated-input" type="text" readonly value="">
-            <button class="primary-button" id="generatePassword" type="button">Generate</button>
-            <button class="secondary-button" id="copyPassword" type="button">Copy</button>
-          </div>
+        <div class="analysis-grid">
+          <section class="subpanel" aria-labelledby="attack-title">
+            <div class="section-heading">
+              <p class="eyebrow">Attack Model</p>
+              <h3 id="attack-title">Estimated Crack Time</h3>
+            </div>
+            <div class="attack-list" id="attackList"></div>
+          </section>
+
+          <section class="subpanel" aria-labelledby="generator-title">
+            <div class="section-heading">
+              <p class="eyebrow">Generator</p>
+              <h3 id="generator-title">Strong Demo Password</h3>
+            </div>
+            <div class="generated-row">
+              <input id="generatedPassword" class="generated-input" type="text" readonly value="">
+              <button class="primary-button" id="generatePassword" type="button">Generate</button>
+              <button class="secondary-button" id="copyPassword" type="button">Copy</button>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -84,6 +108,14 @@
         <div class="recommendation-box">
           <h3>Recommendations</h3>
           <ul id="recommendationList"></ul>
+        </div>
+
+        <div class="report-box">
+          <div class="report-heading">
+            <h3>Sanitized Report</h3>
+            <button class="secondary-button compact" id="copyReport" type="button">Copy</button>
+          </div>
+          <pre id="reportText">No analysis yet.</pre>
         </div>
       </aside>
     </section>
