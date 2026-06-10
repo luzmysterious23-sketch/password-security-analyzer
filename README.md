@@ -70,10 +70,3 @@ The dashboard shows a score, risk summary, attack estimates, security findings, 
 ## Important Security Note
 
 This is an educational portfolio project. Users should not test real passwords in a public demo.
-
-## Resume Bullets
-
-- Built a browser-based password security analyzer using HTML, CSS, and JavaScript.
-- Implemented live password scoring with entropy estimation, common-password detection, leetspeak normalization, sequence checks, and attack-model crack-time estimates.
-- Designed a responsive cybersecurity dashboard with risk findings, recommendations, and sanitized reporting.
-
