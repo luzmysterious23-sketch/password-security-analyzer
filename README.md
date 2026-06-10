@@ -77,16 +77,3 @@ This is an educational portfolio project. Users should not test real passwords i
 - Implemented live password scoring with entropy estimation, common-password detection, leetspeak normalization, sequence checks, and attack-model crack-time estimates.
 - Designed a responsive cybersecurity dashboard with risk findings, recommendations, and sanitized reporting.
 
-## LinkedIn Post Draft
-
-I built a cybersecurity portfolio project: a browser-based Password Security Analyzer.
-
-The app evaluates sample passwords using entropy estimates, pattern detection, common-password checks, leetspeak normalization, and attack-model crack-time estimates. It also generates a sanitized report without storing or sending the password.
-
-Live demo:
-https://luzmysterious23-sketch.github.io/password-security-analyzer/
-
-GitHub:
-https://github.com/luzmysterious23-sketch/password-security-analyzer
-
-#Cybersecurity #JavaScript #InfoSec #StudentProjects #Portfolio
