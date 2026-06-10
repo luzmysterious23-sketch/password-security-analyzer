@@ -2,14 +2,6 @@
 
 A browser-based cybersecurity portfolio project that analyzes password strength, explains risky patterns, and estimates cracking risk across multiple attack models.
 
-## Live Demo
-
-After GitHub Pages is enabled, the live demo is available at:
-
-```text
-https://luzmysterious23-sketch.github.io/password-security-analyzer/
-```
-
 ## What It Does
 
 The analyzer runs entirely in the browser and updates as a sample password is entered. It does not send passwords over the network.
